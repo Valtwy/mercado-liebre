@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-
+const port= process.env.PORT || 3030
 const path = require('path');
 
 const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath))
 
-app.listen(3030, () => {
+app.listen(process.env.PORT || 3030, function() {
     console.log("Servidor corriendo en puerto 3030")
 })
 
